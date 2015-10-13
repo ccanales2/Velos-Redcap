@@ -15,24 +15,24 @@ The connection that I am currently working on is this:
 
 I'm using PyCap (@sburns) to tap into REDCap. Here is that part of it
 
-$ pip install requests
-$ git clone git://github.com/sburns/PyCap.git PyCap
-$ cd PyCap
-$ python setup.py install
-
-Now my specifics...(with the help of @sburns
-
-import redcap
-from redcap import Project, RedcapError
-url = 'https://########YOUR REDCAP URL#####/api'
-token = '##### YOUR REDCAP API  #####'
-project = Project(url, token)
-
-import csv
-with open('C:\\####location of csv file####') as fobj:
-...:  reader = csv.DictReader(fobj)
-...:  data = [row for row in reader]
-
-count = project.import_reader(data)
+$ pip install requests <br>
+$ git clone git://github.com/sburns/PyCap.git PyCap <br>
+$ cd PyCap<br>
+$ python setup.py install<br>
+<br>
+Now my specifics...(with the help of @sburns<br>
+<br>
+import redcap<br>
+from redcap import Project, RedcapError<br>
+url = 'https://########YOUR REDCAP URL#####/api'<br>
+token = '##### YOUR REDCAP API  #####'<br>
+project = Project(url, token)<br>
+<br>
+import csv<br>
+with open('C:\\####location of csv file####') as fobj:<br>
+...:  reader = csv.DictReader(fobj)<br>
+...:  data = [row for row in reader]<br>
+<br>
+count = project.import_reader(data)<br>
 
 
